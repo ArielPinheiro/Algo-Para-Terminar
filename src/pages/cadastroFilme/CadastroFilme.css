@@ -1,0 +1,278 @@
+/* ── Reset & base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+/* ── Page wrapper ── */
+.cf-page {
+  min-height: calc(100vh - 115px); /* descontando header + footer */
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  gap: 40px;
+}
+ 
+/* ── Card container ── */
+.cf-card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 40px 48px;
+  width: 100%;
+  max-width: 560px;
+}
+ 
+/* ── Título ── */
+.cf-title {
+  color: #7c4dff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+ 
+/* ── Formulário ── */
+.cf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+ 
+.cf-label {
+  color: #aaaaaa;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  display: block;
+}
+ 
+.cf-input,
+.cf-select {
+  width: 100%;
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+ 
+.cf-input::placeholder {
+  color: #555555;
+}
+ 
+.cf-input:focus,
+.cf-select:focus {
+  border-color: #7c4dff;
+}
+ 
+.cf-select option {
+  background-color: #1a1a1a;
+}
+ 
+/* ── Upload ── */
+.cf-file-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+ 
+.cf-file-btn {
+  background-color: #2a2a2a;
+  border: 1px solid #444444;
+  border-radius: 8px;
+  color: #cccccc;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+ 
+.cf-file-btn:hover {
+  background-color: #333333;
+}
+ 
+.cf-file-name {
+  color: #666666;
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ 
+input[type="file"] {
+  display: none;
+}
+ 
+/* ── Botões de ação ── */
+.cf-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+ 
+.cf-btn-primary {
+  flex: 1;
+  background-color: #7c4dff;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 11px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+ 
+.cf-btn-primary:hover {
+  background-color: #6a3de8;
+}
+ 
+.cf-btn-primary:active {
+  transform: scale(0.98);
+}
+ 
+.cf-btn-cancel {
+  background-color: transparent;
+  border: 1px solid #444444;
+  border-radius: 8px;
+  color: #aaaaaa;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 11px 20px;
+  transition: border-color 0.2s, color 0.2s;
+}
+ 
+.cf-btn-cancel:hover {
+  border-color: #7c4dff;
+  color: #e0e0e0;
+}
+ 
+/* ── Tabela ── */
+.cf-table-card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 760px;
+}
+ 
+.cf-table-title {
+  color: #7c4dff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px 0 0;
+  letter-spacing: -0.3px;
+}
+ 
+table.cf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+ 
+table.cf-table thead tr {
+  background-color: #7c4dff;
+}
+ 
+table.cf-table thead th {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  letter-spacing: 0.04em;
+}
+ 
+table.cf-table tbody tr {
+  border-bottom: 1px solid #242424;
+  transition: background-color 0.15s;
+}
+ 
+table.cf-table tbody tr:last-child {
+  border-bottom: none;
+}
+ 
+table.cf-table tbody tr:hover {
+  background-color: #222222;
+}
+ 
+table.cf-table tbody td {
+  color: #d0d0d0;
+  font-size: 0.9rem;
+  padding: 12px 16px;
+}
+ 
+/* ── Imagem na tabela ── */
+.cf-table-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #333333;
+}
+ 
+/* ── Ações da tabela ── */
+.cf-table-action {
+  background: none;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  color: #aaaaaa;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  margin-right: 6px;
+  transition: all 0.2s;
+}
+ 
+.cf-table-action:hover {
+  border-color: #7c4dff;
+  color: #7c4dff;
+}
+ 
+.cf-table-action.excluir:hover {
+  border-color: #e05555;
+  color: #e05555;
+}
+ 
+/* ── Vazio ── */
+.cf-empty {
+  color: #555555;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 32px 0;
+}
+ 
+/* ── Responsivo ── */
+@media (max-width: 600px) {
+  .cf-card {
+    padding: 28px 20px;
+  }
+ 
+  .cf-title {
+    font-size: 1.5rem;
+  }
+ 
+  table.cf-table thead th,
+  table.cf-table tbody td {
+    padding: 10px 10px;
+    font-size: 0.8rem;
+  }
+}
+ 
+
+
